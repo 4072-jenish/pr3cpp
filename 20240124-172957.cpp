@@ -1,52 +1,71 @@
 #include<iostream>
+
 using namespace std;
-class EmployeeInfo {
+
+class EmployeInfo {
+
 public:
     int emid;
     int emage;
     int salary;
 };
-class EmployeeInfo2 {
+
+class EmployeInfo2 {
+
 public:
     char fname[25];
     char sname[25];
     char desgnt[25];
+
 };
-class GetDetails : public EmployeeInfo, public EmployeeInfo2 {
+class GetDetails : public EmployeInfo, public EmployeInfo2 {
+
 public:
-    void SetValues() {
-        cout<<"Enter Employee ID : ";
+
+    void Setdata() {
+        cout<<"Enter Employe ID : ";
         cin>>emid;
-        cout<<"Enter Employee Age : ";
+        cout<<"Enter Employe Age : ";
         cin>>emage;
-        cout<<"Enter Employee First Name : ";
+        cout<<"Enter Employe First Name : ";
         cin>>fname;
-        cout<<"Enter Employee Surname : ";
+        cout<<"Enter Employe Surname : ";
         cin>>sname;
-        cout<<"Enter Employee Designation : ";
+        cout<<"Enter Employe Designation : ";
         cin>>desgnt;
-        cout<<"Enter Employee Salary : ";
+        cout<<"Enter Employe Salary : ";
         cin>>salary;
+        
     }
-    void GetValues() {
-        cout<<" Employee ID is : "<<emid<<endl;
-        cout<<" Employee First Name is : "<<fname<<endl;
-        cout<<" Employee Surname is : "<<sname<<endl;
-        cout<<" Employee Age is : "<<emage<<endl;
-        cout<<" Employee Designation is : "<<desgnt<<endl;
-        cout<<" Employee Salary is : "<<salary<<endl;
+
+    void Getdata() {
+        
+        cout<<" Employe's ID  : "<<emid<<endl;
+        cout<<" Employe's First Name : "<<fname<<endl;
+        cout<<" Employe's Surname  : "<<sname<<endl;
+        cout<<" Employe's Age  : "<<emage<<endl;
+        cout<<" Employe's Designation  : "<<desgnt<<endl;
+        cout<<" Employe's Salary  : "<<salary<<endl;
+        
     }
 };
+
 int main() {
+    
     int i,n;
-    cout<<"Enter the Number of Employee Details you Want : ";
+    
+    cout<<"Enter the Number of Employe Details you Want : ";
     cin>>n;
+    
     GetDetails g[n];
+    
     for(i=0; i<n; i++) {
-        g[i].SetValues();
+        g[i].Setdata();
     }
+    
     for(i=0; i<n; i++) {
-        g[i].GetValues();
+        g[i].Getdata();
     }
+    
     return 0;
 }
