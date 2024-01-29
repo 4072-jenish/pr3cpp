@@ -1,31 +1,50 @@
 #include<iostream>
+
 using namespace std;
+
 class TakeNumber{
+
 	public:
+
 		int num;
-		void TakeInput(){
+		void Takedata(){
 			cout<<"Enter Number : ";
 			cin>>num;
 		}
+
 };
-class SquareNum : public TakeNumber{
+
+class Square : public TakeNumber
+{
+
 	public:
-		void Square(){
-			TakeInput();
+
+
+		void Squar(){
+			
+			Takedata();
 			cout<<"The Square of Number "<<num<<" is "<<num*num<<endl;
+			
 		}
 };
-class CubeNum : public TakeNumber{
+class Cubee : public TakeNumber
+{
 	public:
+
 		void Cube(){
-			TakeInput();
+			Takedata();
 			cout<<"The Cube of Number "<<num<<" is "<<num*num*num<<endl;
 		}
+
 };
+
 int main(){
-	CubeNum c;
-	SquareNum s;
-	s.Square();
+
+	
+	Cubee c;
+	Squar s;
+	s.Squar();
 	c.Cube();
+	
 	return 0;
 }
